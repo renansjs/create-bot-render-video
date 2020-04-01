@@ -1,0 +1,22 @@
+{
+  "name": "create-bot-render-video",
+  "version": "1.0.0",
+  "description": "Projeto de estudo, envolvendo node, IA, e outras tecnologias relacionadas, para criação de bot's para criar video na internet.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renansjs/create-bot-render-video.git"
+  },
+  "author": "Renan Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renansjs/create-bot-render-video/issues"
+  },
+  "homepage": "https://github.com/renansjs/create-bot-render-video#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
