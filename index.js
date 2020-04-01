@@ -1,6 +1,10 @@
 const readline = require('readline-sync');
+const robots = {
+  // userInput: require('./robots/user-input'),
+  text: require('./robots/text')
+}
 
-function start() {
+async function start() {
 
   const content = {}
   
@@ -8,6 +12,10 @@ function start() {
   
   content.searchTerm = askAndReturnSearchTerm();
   content.prefix = askReturnPrefix();
+
+  // robots.userInput(content)
+  await robots.text(content);
+
 
   function askAndReturnSearchTerm() {
   //atraves da lib readline-sync, ele faz uma pergunta para o user que, responde
