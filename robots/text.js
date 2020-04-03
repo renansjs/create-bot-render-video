@@ -11,14 +11,20 @@ const nlu = new NaturalLanguageUnderstandingV1({
   url: 'https://api.eu-gb.natural-language-understanding.watson.cloud.ibm.com/instances/ca220ce8-9305-4ec7-9be3-b6d568cc707b'
 });
 
+const state = require('./state');
+
 //criando uma interface publica.
 async function robots(content){
+
+  content = state.load();
+  
  await fetchContentFromWikipedia(content);
        sanitizeContent(content);
        breakContentIntoSentences(content)
        limitMaximumSentences(content)
  await fetchKeywordsOfAllSentences(content) 
-       
+ 
+ state.save(content)
 
   async function fetchContentFromWikipedia(content) {
     const algorithmiaAuthenticated = algorithmia(algorithmiaKey);
